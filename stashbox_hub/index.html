@@ -89,13 +89,13 @@
 <body class="bg-background text-on-surface antialiased overflow-x-hidden pb-24">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-[#353534]/60 backdrop-blur-xl shadow-2xl shadow-black/10 flex justify-between items-center px-8 h-20 w-full">
-<div class="text-2xl font-black text-[#6add84] tracking-widest uppercase">Reggae.Land</div>
+<a class="text-2xl font-black text-[#6add84] tracking-widest uppercase" href="/">Reggae.Land</a>
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-['Epilogue'] uppercase tracking-tighter text-[#6add84] border-b-2 border-[#6add84] pb-1 transition-all duration-300" href="#">Stashbox</a>
-<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Artist Spotlight</a>
-<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Daily Feed</a>
-<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Merch</a>
-<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Shop</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#6add84] border-b-2 border-[#6add84] pb-1 transition-all duration-300" href="/stashbox_hub/">Stashbox</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/artist_spotlight/">Artist Spotlight</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/the_feed/">The Feed</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/official_merch/">Merch</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/zion_noir/">Shop</a>
 </div>
 <div class="flex items-center gap-4">
 <button class="bg-[#2da553] text-[#e5e2e1] px-6 py-2 rounded-lg font-bold hover:opacity-80 active:scale-95 transition-all duration-300">Subscribe</button>
@@ -115,23 +115,23 @@
 </div>
 </div>
 <div class="space-y-1">
-<a class="flex items-center gap-3 px-4 py-3 bg-[#2da553] text-[#e5e2e1] rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#2da553] text-[#e5e2e1] rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="/stashbox_hub/">
 <span class="material-symbols-outlined" data-icon="library_music">library_music</span>
 <span>Stashbox</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="/artist_spotlight/">
 <span class="material-symbols-outlined" data-icon="star">star</span>
 <span>Artists</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="/the_feed/">
 <span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
-<span>Feed</span>
+<span>The Feed</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="/official_merch/">
 <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
 <span>Merch</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="/zion_noir/">
 <span class="material-symbols-outlined" data-icon="storefront">storefront</span>
 <span>Shop</span>
 </a>
@@ -187,7 +187,7 @@
 <section class="space-y-6">
 <div class="flex items-end justify-between">
 <h2 class="text-3xl font-black uppercase tracking-tight text-[#e5e2e1]">Classic Reggae Covers</h2>
-<a class="text-primary font-bold text-sm hover:underline" href="#">View All Sessions</a>
+<a class="text-primary font-bold text-sm hover:underline" href="/the_feed/">View All Sessions</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Playlist Card 1 -->
@@ -238,7 +238,7 @@
 <section class="space-y-6">
 <div class="flex items-end justify-between">
 <h2 class="text-3xl font-black uppercase tracking-tight text-[#e5e2e1]">Original Productions</h2>
-<a class="text-primary font-bold text-sm hover:underline" href="#">View All Original Works</a>
+<a class="text-primary font-bold text-sm hover:underline" href="/the_feed/">View All Original Works</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <!-- Large Original Card 1 -->
@@ -311,7 +311,7 @@
 <h5 class="text-[#6add84] font-black uppercase text-xs tracking-[0.2em]">Company</h5>
 <ul class="space-y-2 font-['Inter'] text-sm text-[#bdcabb]">
 <li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">About</a></li>
-<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Merch Store</a></li>
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="/official_merch/">Merch Store</a></li>
 <li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Contact</a></li>
 </ul>
 </div>
