@@ -88,6 +88,29 @@
         .cta-gradient {
             background: linear-gradient(135deg, #6add84 0%, #2da553 100%);
         }
+    
+        .subscribe-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .subscribe-wrapper form {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+        }
+        .subscribe-wrapper input[type="email"] {
+            flex: 1 1 220px;
+            min-width: 180px;
+        }
+        .form-success,
+        .form-error,
+        .subscribe-wrapper [data-fs-error="email"] {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
@@ -102,7 +125,16 @@
 <a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="/shop/">Shop</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="cta-gradient text-on-primary px-6 py-2 rounded-lg font-bold uppercase tracking-wider hover:opacity-80 transition-all active:scale-95">Subscribe</button>
+<div class="subscribe-wrapper max-w-md">
+<form id="subscribe-form-home-nav">
+<input type="email" name="email" placeholder="Enter your email" required data-fs-field class="bg-surface-container-highest/70 border border-outline-variant/40 rounded-lg px-3 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:ring-2 focus:ring-primary"/>
+<button type="submit" data-fs-submit-btn class="cta-gradient text-on-primary px-6 py-2 rounded-lg font-bold uppercase tracking-wider hover:opacity-80 transition-all active:scale-95">Subscribe</button>
+<input type="hidden" name="source_page" value="home-nav"/>
+</form>
+<span data-fs-error="email" class="text-error"></span>
+<div data-fs-success class="form-success text-primary">You’re subscribed.</div>
+<div data-fs-error class="form-error text-error"></div>
+</div>
 <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
 <img alt="User Profile" data-alt="minimalist avatar icon of a person with stylish features and a soft gradient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcC3C6IUYFZKA4XydT_SkP1gdPw5sMzFSAvvK5YWOctTBqs3YcfVEsRqvz5Wy4vxEu7-vIBXPXFe1LsWu1gfC1fL65HK1H_RNB-cmPhlabOLVUqLX3NG2IWYVabtmFC8aSTiG8y-AsyZHXBn3B1iAWeOaDHUacV1UONgoe8T9ZetYnF6JjX7GzjYj2mHR0cgfFpe1fwW2iSyc0drMWZhxxbV-79R6jeuQAsUBLyXzonEW-1ma3C2E6E7ma04iy1GbNKlcgG46GlSiF"/>
 </div>
@@ -373,4 +405,9 @@
 </div>
 </div>
 
-```</body></html>
+<script>window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script>
+window.formspree('initForm', { formElement: '#subscribe-form-home-nav', formId: 'xgopdgea' });
+</script>
+</body></html>

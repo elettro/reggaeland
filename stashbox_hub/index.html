@@ -84,6 +84,29 @@
         }
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, h4 { font-family: 'Epilogue', sans-serif; }
+    
+        .subscribe-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .subscribe-wrapper form {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+        }
+        .subscribe-wrapper input[type="email"] {
+            flex: 1 1 220px;
+            min-width: 180px;
+        }
+        .form-success,
+        .form-error,
+        .subscribe-wrapper [data-fs-error="email"] {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface antialiased overflow-x-hidden pb-24">
@@ -98,7 +121,16 @@
 <a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/shop/">Shop</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="bg-[#2da553] text-[#e5e2e1] px-6 py-2 rounded-lg font-bold hover:opacity-80 active:scale-95 transition-all duration-300">Subscribe</button>
+<div class="subscribe-wrapper max-w-md">
+<form id="subscribe-form-stashbox-nav">
+<input type="email" name="email" placeholder="Enter your email" required data-fs-field class="bg-[#353534]/80 border border-[#889486]/40 rounded-lg px-3 py-2 text-sm text-[#e5e2e1] placeholder:text-[#bdcabb] focus:ring-2 focus:ring-[#6add84]"/>
+<button type="submit" data-fs-submit-btn class="bg-[#2da553] text-[#e5e2e1] px-6 py-2 rounded-lg font-bold hover:opacity-80 active:scale-95 transition-all duration-300">Subscribe</button>
+<input type="hidden" name="source_page" value="stashbox-nav"/>
+</form>
+<span data-fs-error="email" class="text-[#ffb4ab]"></span>
+<div data-fs-success class="form-success text-[#6add84]">Thanks for joining.</div>
+<div data-fs-error class="form-error text-[#ffb4ab]"></div>
+</div>
 <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#6add84]">
 <img alt="User Profile" data-alt="close-up portrait of a man with dreadlocks wearing a colorful knitted cap in a high-contrast music studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFuB2Klo3yQxHpndX2V4RzXzN81uqpvkWLPQNsMjBP6ztzkSAYtTpUwYdRKIxFA9mhVx6FX6_nQwQBEkW5EwdDJNzowVbLOjBw_Ihbv8SQYkUMAHnM1gcf-99dwDwLHI1XbLqHN6W0NJfztCMmocGqpDZK9g44vG954zrxjUgCAKoC4nUsfEjfp7k2EHnwo25kEhINUILKX_vTan34Qa-TtXiTzvozOk3tb09fg6H6lf7u6aYn5UmuDnaOOohyFFaJH11xPqx-dHy_"/>
 </div>
@@ -294,10 +326,17 @@
                 </div>
 <h2 class="text-5xl md:text-6xl font-black uppercase leading-tight tracking-tighter">Join the 100k+ Stashbox Fam</h2>
 <p class="text-lg text-on-surface-variant font-medium">Never miss a beat. Get notified of every new production, interview, and secret studio session before anyone else.</p>
-<div class="flex flex-col md:flex-row gap-4 justify-center pt-4">
-<button class="bg-[#2da553] text-[#e5e2e1] px-12 py-5 rounded-lg font-black uppercase tracking-widest text-sm shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
-                        Subscribe Now
-                    </button>
+<div class="flex flex-col md:flex-row gap-4 justify-center pt-4 items-start md:items-end">
+<div class="subscribe-wrapper flex-1 min-w-[280px]">
+<form id="subscribe-form-stashbox-banner">
+<input type="email" name="email" placeholder="Enter your email" required data-fs-field class="bg-surface-container border border-outline-variant/40 rounded-lg px-5 py-4 text-on-surface placeholder:text-on-surface-variant"/>
+<button type="submit" data-fs-submit-btn class="bg-[#2da553] text-[#e5e2e1] px-12 py-5 rounded-lg font-black uppercase tracking-widest text-sm shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all">Subscribe Now</button>
+<input type="hidden" name="source_page" value="stashbox-banner"/>
+</form>
+<span data-fs-error="email" class="text-[#ffb4ab]"></span>
+<div data-fs-success class="form-success text-[#6add84]">You’re on the list.</div>
+<div data-fs-error class="form-error text-[#ffb4ab]"></div>
+</div>
 <button class="border border-outline-variant text-[#e5e2e1] px-12 py-5 rounded-lg font-black uppercase tracking-widest text-sm hover:bg-surface-container-highest transition-all">
                         Explore Shop
                     </button>
@@ -383,4 +422,10 @@
 </button>
 </div>
 </div>
+<script>window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script>
+window.formspree('initForm', { formElement: '#subscribe-form-stashbox-nav', formId: 'xgopdgea' });
+window.formspree('initForm', { formElement: '#subscribe-form-stashbox-banner', formId: 'xgopdgea' });
+</script>
 </body></html>

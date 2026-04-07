@@ -88,6 +88,29 @@
         .primary-gradient {
             background: linear-gradient(135deg, #6add84 0%, #2da553 100%);
         }
+    
+        .subscribe-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .subscribe-wrapper form {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+        }
+        .subscribe-wrapper input[type="email"] {
+            flex: 1 1 220px;
+            min-width: 180px;
+        }
+        .form-success,
+        .form-error,
+        .subscribe-wrapper [data-fs-error="email"] {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
@@ -102,7 +125,16 @@
 <a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/shop/">Shop</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="primary-gradient text-on-primary font-bold px-6 py-2 rounded-lg active:scale-95 transition-all duration-200 font-headline uppercase text-sm tracking-wider">Subscribe</button>
+<div class="subscribe-wrapper max-w-md">
+<form id="subscribe-form-feed-nav">
+<input type="email" name="email" placeholder="Enter your email" required data-fs-field class="bg-surface-container-highest/80 border border-outline-variant/40 rounded-lg px-3 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:ring-2 focus:ring-primary"/>
+<button type="submit" data-fs-submit-btn class="primary-gradient text-on-primary font-bold px-6 py-2 rounded-lg active:scale-95 transition-all duration-200 font-headline uppercase text-sm tracking-wider">Subscribe</button>
+<input type="hidden" name="source_page" value="feed-nav"/>
+</form>
+<span data-fs-error="email" class="text-error"></span>
+<div data-fs-success class="form-success text-primary">You’re subscribed.</div>
+<div data-fs-error class="form-error text-error"></div>
+</div>
 <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline-variant/20">
 <img alt="User Profile" data-alt="Close up portrait of a stylish person with dreadlocks wearing headphones in a warm studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXEX2EsTMF5--vzZaH9lVCnBoQm4CgsL038L2HXvWqpvNtIPJkk3w9uvKnThuPxzbOIYBaJVZPGfwrdS3WcqV90k-wTOVv2H7frL7cDtg1CksLnFIyRxXq8R0spBF-hfo_t-r0eNJsWgkSxNFPJPQcQ65DZNmfuPHG1j26w7aifLJheseDBKTubSadI01R0m4IQUO6f3R8ad9bp5lVqyeX1QpcD-MYof4KPfxNxGT5S8QC15xtHo9cQgrRIDLt9b1C6JETtZOWju7l"/>
 </div>
@@ -306,10 +338,16 @@
 </div>
 <h3 class="text-3xl font-black font-headline uppercase leading-none">Join the <span class="text-primary">Stash</span></h3>
 <p class="text-on-surface-variant text-sm font-body">Exclusive vinyl drops, studio secrets, and cultural deep-dives delivered to your inbox.</p>
-<form class="space-y-3" onsubmit="return false">
-<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary placeholder:text-on-surface-variant/40" placeholder="YOUR EMAIL ADDRESS" type="email"/>
-<button class="w-full bg-primary text-on-primary font-black py-3 rounded-lg uppercase tracking-widest text-sm hover:opacity-90 active:scale-[0.98] transition-all">SUBSCRIBE NOW</button>
+<div class="subscribe-wrapper">
+<form id="subscribe-form-feed-sidebar">
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-primary placeholder:text-on-surface-variant/40" placeholder="YOUR EMAIL ADDRESS" type="email" name="email" required data-fs-field/>
+<button type="submit" data-fs-submit-btn class="w-full bg-primary text-on-primary font-black py-3 rounded-lg uppercase tracking-widest text-sm hover:opacity-90 active:scale-[0.98] transition-all">SUBSCRIBE NOW</button>
+<input type="hidden" name="source_page" value="feed-sidebar"/>
 </form>
+<span data-fs-error="email" class="text-error"></span>
+<div data-fs-success class="form-success text-primary">Thanks for joining.</div>
+<div data-fs-error class="form-error text-error"></div>
+</div>
 <p class="text-[10px] text-center text-on-surface-variant/50 uppercase tracking-tighter">Respect your privacy. No spam, only fire.</p>
 </div>
 </section>
@@ -406,9 +444,15 @@
 <h4 class="text-on-surface font-bold uppercase mb-6 text-sm tracking-widest">Mailing List</h4>
 <div class="flex flex-col gap-4">
 <p class="text-[#bdcabb] text-xs">Stay tuned for the weekly vibe check.</p>
-<div class="flex">
-<input class="bg-surface-container-low border-none rounded-l-lg text-sm w-full" placeholder="Email" type="text"/>
-<button class="bg-primary text-on-primary px-4 rounded-r-lg font-bold">→</button>
+<div class="subscribe-wrapper">
+<form id="subscribe-form-feed-footer">
+<input class="bg-surface-container-low border-none rounded-l-lg text-sm w-full" placeholder="Email" type="email" name="email" required data-fs-field/>
+<button type="submit" data-fs-submit-btn class="bg-primary text-on-primary px-4 rounded-r-lg font-bold">Subscribe</button>
+<input type="hidden" name="source_page" value="feed-footer"/>
+</form>
+<span data-fs-error="email" class="text-error"></span>
+<div data-fs-success class="form-success text-primary">You’re on the list.</div>
+<div data-fs-error class="form-error text-error"></div>
 </div>
 </div>
 </div>
@@ -432,4 +476,11 @@
 <span class="font-['Inter'] font-bold text-[10px] uppercase">Volume</span>
 </div>
 </div>
+<script>window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script>
+window.formspree('initForm', { formElement: '#subscribe-form-feed-nav', formId: 'xgopdgea' });
+window.formspree('initForm', { formElement: '#subscribe-form-feed-sidebar', formId: 'xgopdgea' });
+window.formspree('initForm', { formElement: '#subscribe-form-feed-footer', formId: 'xgopdgea' });
+</script>
 </body></html>
