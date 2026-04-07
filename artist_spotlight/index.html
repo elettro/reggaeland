@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artist Spotlight | Reggae.Land</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#003915",
+                        "on-secondary-container": "#725f00",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "background": "#131313",
+                        "on-secondary": "#3a3000",
+                        "secondary-fixed": "#ffe16d",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#ffdad5",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "on-tertiary": "#690001",
+                        "primary-fixed-dim": "#6add84",
+                        "inverse-primary": "#006e2f",
+                        "surface-container-highest": "#353534",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#bdcabb",
+                        "on-primary-fixed": "#002109",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#889486",
+                        "on-tertiary-fixed": "#410000",
+                        "on-error": "#690005",
+                        "tertiary": "#ffb4a9",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#930003",
+                        "on-primary-fixed-variant": "#005322",
+                        "on-primary-container": "#003111",
+                        "primary": "#6add84",
+                        "secondary-container": "#ffdb3c",
+                        "on-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#ff5543",
+                        "primary-fixed": "#87fb9d",
+                        "on-tertiary-container": "#5c0001",
+                        "secondary": "#fff9ef",
+                        "on-secondary-fixed-variant": "#544600",
+                        "surface-tint": "#6add84",
+                        "primary-container": "#2da553",
+                        "surface-variant": "#353534",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#221b00",
+                        "secondary-fixed-dim": "#e9c400",
+                        "surface": "#131313",
+                        "outline-variant": "#3e4a3e",
+                        "surface-container": "#201f1f",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(229, 226, 225, 0.3);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#353534]/60 backdrop-blur-xl shadow-2xl shadow-black/10 flex justify-between items-center px-8 h-20 w-full">
+<div class="text-2xl font-black text-[#6add84] tracking-widest font-['Epilogue'] uppercase tracking-tighter">Reggae.Land</div>
+<nav class="hidden md:flex gap-8 font-['Epilogue'] uppercase tracking-tighter">
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="#">Stashbox</a>
+<a class="text-[#6add84] border-b-2 border-[#6add84] pb-1 hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="#">Artist Spotlight</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="#">Daily Feed</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="#">Merch</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="#">Shop</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-lg hover:opacity-80 transition-all duration-300 active:scale-95 duration-200 uppercase text-sm tracking-widest font-headline">Subscribe</button>
+<img alt="User Profile" class="w-10 h-10 rounded-full border border-outline-variant/30" data-alt="close-up portrait of a stylish person wearing headphones in a moody studio setting with green lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi-Vyb2lG9rAHkTNGZT_O6qGqh9PU4pYJyp8nY1OnUBDT7DwqZhYsnHn5eoEehtYTACqaL4U3xk3HDHCh0LUwMCWQ4rqnGvqfVIes73oUr_QSOi8RDPZ9PzILe0N5_dnCCob14iUmz2nwzrtD1XVbgUavxu1MV-b_1eEgEXvCR7Kjs9sjua8XWoF4ds2bTJLGtHFR8dAIVvEu-sUw8bYFgnk_LDKd3RODjYZ5Y2oFYaY6BR7efGIgr_YopXQ4adW99Ukcq6466Exvm"/>
+</div>
+</header>
+<!-- SideNavBar (Visible on Web) -->
+<aside class="fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col h-full w-64 border-r border-[#353534]/20 bg-[#131313] font-['Epilogue'] font-bold">
+<div class="p-8 flex flex-col items-start gap-2">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-2xl">graphic_eq</span>
+</div>
+<div class="mt-4">
+<h2 class="text-[#6add84] font-black uppercase tracking-wider text-xl">Reggae.Land</h2>
+<p class="text-on-surface-variant text-xs font-normal">The Sonic Canvas</p>
+</div>
+</div>
+<nav class="flex-grow py-4">
+<ul class="space-y-1">
+<li><a class="flex items-center gap-4 px-6 py-3 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all ease-in-out duration-300" href="#"><span class="material-symbols-outlined">library_music</span> Stashbox</a></li>
+<li><a class="flex items-center gap-4 px-6 py-3 bg-[#2da553] text-[#e5e2e1] rounded-lg mx-2 hover:pl-2 transition-all ease-in-out duration-300" href="#"><span class="material-symbols-outlined">star</span> Artists</a></li>
+<li><a class="flex items-center gap-4 px-6 py-3 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all ease-in-out duration-300" href="#"><span class="material-symbols-outlined">rss_feed</span> Feed</a></li>
+<li><a class="flex items-center gap-4 px-6 py-3 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all ease-in-out duration-300" href="#"><span class="material-symbols-outlined">shopping_bag</span> Merch</a></li>
+<li><a class="flex items-center gap-4 px-6 py-3 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all ease-in-out duration-300" href="#"><span class="material-symbols-outlined">storefront</span> Shop</a></li>
+</ul>
+</nav>
+<div class="p-6 border-t border-outline-variant/10">
+<ul class="space-y-1 mb-6 text-sm">
+<li><a class="flex items-center gap-4 px-2 py-2 text-[#bdcabb] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">settings</span> Settings</a></li>
+<li><a class="flex items-center gap-4 px-2 py-2 text-[#bdcabb] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">help</span> Support</a></li>
+</ul>
+<button class="w-full py-3 bg-surface-container-highest text-primary font-bold rounded-lg border border-primary/20 hover:bg-primary/10 transition-all">Subscribe</button>
+</div>
+</aside>
+<main class="lg:ml-64 pt-20 pb-32">
+<!-- Featured Artist Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Toots Hibbert" class="w-full h-full object-cover grayscale opacity-60" data-alt="dramatic high-contrast black and white studio portrait of legendary reggae artist Toots Hibbert with intense gaze and textured lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN5dLEXvVoUtbmgaIG_1cLMDWk4nZhmKL_3-vkewCp9xUnJmj5zyIP7zzkj5JgzOICXCLqfPbn5QttvbTvyhNecQ4jtgcR9Jm2zsJTreHDcC1Gykmf014Ya3IGHeNaBYC7jnt_XOir-VejOS4OdYhM-QZSfQ8e2jcRmnP_ghslY-7rsecrYXfUV42PCIHYkuwfdjS_Ljhe2yZrgIolhTkE9UH6ADhS-1AeRvCZ7Fzj8Xp-BppEZjF5xBgxgxnQHJWwL5ZNoYsR7XR1"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-8 md:px-16 max-w-4xl">
+<div class="inline-block px-4 py-1 bg-secondary-fixed-dim/20 border border-secondary-fixed-dim/30 rounded-full mb-6">
+<span class="text-secondary-fixed-dim font-headline font-bold text-xs uppercase tracking-widest">Tip of the Cap</span>
+</div>
+<h1 class="text-7xl md:text-9xl font-headline font-black uppercase leading-none tracking-tighter mb-8 flex flex-col">
+<span>Toots</span>
+<span class="text-stroke">Hibbert</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-body mb-10 max-w-2xl leading-relaxed">
+                    The architect of the word 'Reggae'. A soulful pioneer whose vocal power redefined the sound of the Caribbean. We honor the king of Ska and Rocksteady.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="group flex items-center gap-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-black px-10 py-5 rounded-xl hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/20">
+                        WATCH PERFORMANCES
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">play_arrow</span>
+</button>
+<button class="glass-panel text-on-surface border border-outline-variant/30 font-headline font-bold px-10 py-5 rounded-xl hover:bg-surface-container-highest transition-all">
+                        VIEW STASHBOX
+                    </button>
+</div>
+</div>
+</section>
+<!-- Artist Roster Grid -->
+<section class="px-8 md:px-16 py-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="text-5xl font-headline font-black uppercase tracking-tighter mb-4">The Roster</h2>
+<p class="text-on-surface-variant text-lg">Curated legends and the new wave of the sonic revolution.</p>
+</div>
+<div class="flex gap-4">
+<button class="p-4 rounded-full border border-outline-variant/30 hover:border-primary transition-colors text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-4 rounded-full border border-outline-variant/30 hover:border-primary transition-colors text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Artist Card 1 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-80 overflow-hidden">
+<img alt="Maxi Priest" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="professional portrait of Maxi Priest performing on stage with moody red and blue stage lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9rD11foTg0uo31PKNfirgG7khGEtWJjK1oseON2WPkuSXP2IK3Srn17lRUSm42fq5ZcEBmHuwqXFV4vKv0V5mQJYErcIBVfcX8kX-utmU5mVF9HNWKX9ywCUQ-PuZLsaxYRwCiPCzmbwsFodHbQ5hkH6KQCDe4OaEoJvSZwkV-V7z1XEukS0KQy_TONCA2UR5JDehEqyteegp6pd104VbnUkbiTBWB5L1aIPZDvSr64XjtTQ3B_rWNHk2J2zGGIBfPqnY68ojUW8q"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-secondary-fixed-dim text-on-secondary text-[10px] font-black uppercase rounded-full tracking-widest shadow-lg">Legend</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-headline font-black uppercase mb-1 tracking-tight">Maxi Priest</h3>
+<p class="text-on-surface-variant text-sm mb-6">Roots, Reggae, Soul</p>
+<a class="flex items-center justify-between group/link text-primary font-bold text-sm uppercase tracking-widest" href="#">
+                            Stashbox Sessions
+                            <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Artist Card 2 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-80 overflow-hidden">
+<img alt="Squidly Cole" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="drummer Squidly Cole in action at a recording studio with vintage gear and warm golden atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_blWTLM1fU_V1HoYBNzMyxUVAdMxFXRRS8VR8PVhTzzidnJRsUEs4tLOb0R31r8JiIMvaanlQ6VVFZkoJBbDkwnF6w1JG0zSsDvDVfe6AAoWzMfSSi6PkRNuyP81RSf3WnG0ZJ98Yi_CjYFwSixYVDTwH6644t3N61_KOoWPiAmiJYrp_-wW-ONgYhGlL9wfO4WRl_Cz_D_n4E0yFi6QZFI4ydMj8wpLa4QMlJzQ5xjF72ivbt429Gw9hnQLPti-i9Ct3M4HpyAFH"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-primary text-on-primary text-[10px] font-black uppercase rounded-full tracking-widest shadow-lg">Virtuoso</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-headline font-black uppercase mb-1 tracking-tight">Squidly Cole</h3>
+<p class="text-on-surface-variant text-sm mb-6">Percussion Master</p>
+<a class="flex items-center justify-between group/link text-primary font-bold text-sm uppercase tracking-widest" href="#">
+                            Stashbox Sessions
+                            <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Artist Card 3 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-80 overflow-hidden">
+<img alt="Katchafire" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="wide shot of Katchafire band members standing in a lush tropical forest with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlJ1knjaspXPZ2OuRgbeXB8VTyKPw200wlOyUnZkrE0mNQiH575fKcJhRELLsKOBRJ95O2dqenrgLrTDq4jqVxBWdX9Uv1Wca9tIhN-JP4wyl9t2amcTV0ixjLnRY_KyDUGYu-fGm6JeSreR6oD6t3B_hTcpuQo7GgnJGaGPCXjTx8x8PA5wPU_aMYdK8kF5wUY8Q5ci8meO53mipTpqSJkR92punG4ixHi9YPmxTghdk8MsCJgGH41hy1tQN4Y8hu6jCVyYVJaIEy"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-black uppercase rounded-full tracking-widest shadow-lg">New Wave</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-headline font-black uppercase mb-1 tracking-tight">Katchafire</h3>
+<p class="text-on-surface-variant text-sm mb-6">Modern Roots</p>
+<a class="flex items-center justify-between group/link text-primary font-bold text-sm uppercase tracking-widest" href="#">
+                            Stashbox Sessions
+                            <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Artist Card 4 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-500 hover:-translate-y-2">
+<div class="relative h-80 overflow-hidden">
+<img alt="Silverback Artists" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="abstract artistic shot of musicians in a recording session at Silverback Records with moody purple lighting and silhouettes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0LV-1e_voxLNjhRvuf8Z_FcXI-DdNNGHUjKz_MWuBAyDMjEDlNcPkUdEqJKrzWNsWfiyc7tyqNwU7e18R3Sy540Z1E4sIo0lCGIYCltlA9T2rPXzTVbK4eNBD3WzaOtmrIpzp-Win40M_qZdobOEF9spQ3A6pS0wsELarRSBI6QZXrZEwQOiNpnFml9gN84VD0Pgf1V1GRIQF3BReG404o0ihjGsJZ5gLuCGNQljaGcxVb1SuGWzPK0cQRjfBmqd3JA7fm4j-V0Zi"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface text-[10px] font-black uppercase rounded-full tracking-widest shadow-lg">Collective</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-headline font-black uppercase mb-1 tracking-tight">Silverback</h3>
+<p class="text-on-surface-variant text-sm mb-6">Artist Collective</p>
+<a class="flex items-center justify-between group/link text-primary font-bold text-sm uppercase tracking-widest" href="#">
+                            Stashbox Sessions
+                            <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="px-8 md:px-16 py-24 bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto glass-panel p-12 md:p-24 rounded-[2rem] border border-outline-variant/10 flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1">
+<h2 class="text-5xl md:text-7xl font-headline font-black uppercase tracking-tighter mb-6 leading-none">Join the Culture</h2>
+<p class="text-on-surface-variant text-xl leading-relaxed">Get exclusive access to underground interviews, early merch drops, and behind-the-scenes Stashbox content.</p>
+</div>
+<div class="flex-1 w-full">
+<form class="space-y-4">
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-5 px-6 focus:ring-2 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Your email address" type="email"/>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-headline font-black uppercase tracking-widest rounded-xl hover:bg-primary/90 transition-all active:scale-95">Subscribe Now</button>
+<p class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest text-center mt-4">By subscribing you agree to our privacy policy.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full h-20 z-50 bg-[#353534]/70 backdrop-blur-md flex justify-between items-center px-12 w-full shadow-[0_-10px_40px_rgba(0,0,0,0.4)]">
+<div class="flex flex-col items-center gap-1 text-[#e5e2e1] hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-['Inter'] font-bold text-[10px] uppercase">Now Playing</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#e9c400] hover:scale-110 transition-transform animate-pulse-subtle">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-['Inter'] font-bold text-[10px] uppercase">Artists</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#e5e2e1] hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-['Inter'] font-bold text-[10px] uppercase">Shop</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-16 px-8 border-t border-[#353534]/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto font-['Inter'] text-sm">
+<div class="space-y-6">
+<div class="text-[#e9c400] font-black text-2xl uppercase font-headline">Reggae.Land</div>
+<p class="text-[#bdcabb] leading-relaxed">Defining the digital frontier for Caribbean sound and culture. From the roots to the future.</p>
+</div>
+<div>
+<h4 class="text-on-surface font-bold uppercase tracking-widest mb-6">Ecosystem</h4>
+<ul class="space-y-4">
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">Stashbox</a></li>
+<li><a class="text-[#6add84] transition-colors duration-200" href="#">Artist Spotlight</a></li>
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">Daily Feed</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold uppercase tracking-widest mb-6">Social</h4>
+<ul class="space-y-4">
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">YouTube</a></li>
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">Instagram</a></li>
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">Facebook</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">About</a></li>
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">Privacy</a></li>
+<li><a class="text-[#bdcabb] hover:text-[#e9c400] transition-colors duration-200" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-[#bdcabb] text-xs uppercase tracking-widest opacity-50">© 2024 Reggae.Land. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>
