@@ -93,13 +93,13 @@
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 h-20 w-full bg-[#353534]/60 backdrop-blur-xl shadow-2xl shadow-black/10">
-<div class="text-2xl font-black text-[#6add84] tracking-widest font-['Epilogue'] uppercase">Reggae.Land</div>
+<a class="text-2xl font-black text-[#6add84] tracking-widest font-['Epilogue'] uppercase" href="/">Reggae.Land</a>
 <div class="hidden md:flex gap-8 font-['Epilogue'] uppercase tracking-tighter items-center">
-<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Stashbox</a>
-<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Artist Spotlight</a>
-<a class="text-[#6add84] border-b-2 border-[#6add84] pb-1 hover:opacity-80 transition-all duration-300" href="#">The Feed</a>
-<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Merch</a>
-<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Shop</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/stashbox_hub/">Stashbox</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/artist_spotlight/">Artist Spotlight</a>
+<a class="text-[#6add84] border-b-2 border-[#6add84] pb-1 hover:opacity-80 transition-all duration-300" href="/the_feed/">The Feed</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/official_merch/">Merch</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="/zion_noir/">Shop</a>
 </div>
 <div class="flex items-center gap-4">
 <button class="primary-gradient text-on-primary font-bold px-6 py-2 rounded-lg active:scale-95 transition-all duration-200 font-headline uppercase text-sm tracking-wider">Subscribe</button>
@@ -116,29 +116,29 @@
 <span class="material-symbols-outlined text-on-primary-container" data-icon="library_music">library_music</span>
 </div>
 <div>
-<p class="text-[#6add84] font-black uppercase text-sm tracking-widest">Reggae.Land</p>
+<a class="text-[#6add84] font-black uppercase text-sm tracking-widest" href="/">Reggae.Land</a>
 <p class="text-on-surface-variant text-xs font-normal">The Sonic Canvas</p>
 </div>
 </div>
 </div>
 <nav class="flex-1 space-y-2">
-<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="#">
+<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="/stashbox_hub/">
 <span class="material-symbols-outlined" data-icon="library_music">library_music</span>
 <span>Stashbox</span>
 </a>
-<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="#">
+<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="/artist_spotlight/">
 <span class="material-symbols-outlined" data-icon="star">star</span>
 <span>Artists</span>
 </a>
-<a class="flex items-center gap-3 py-3 px-6 bg-[#2da553] text-[#e5e2e1] rounded-lg mx-2 group" href="#">
+<a class="flex items-center gap-3 py-3 px-6 bg-[#2da553] text-[#e5e2e1] rounded-lg mx-2 group" href="/the_feed/">
 <span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
-<span>Feed</span>
+<span>The Feed</span>
 </a>
-<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="#">
+<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="/official_merch/">
 <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
 <span>Merch</span>
 </a>
-<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="#">
+<a class="flex items-center gap-3 py-3 px-6 text-[#bdcabb] hover:bg-[#353534]/50 hover:pl-2 transition-all duration-300 group" href="/zion_noir/">
 <span class="material-symbols-outlined" data-icon="storefront">storefront</span>
 <span>Shop</span>
 </a>
@@ -162,7 +162,7 @@
 <!-- Section Header -->
 <div class="space-y-2">
 <h1 class="text-6xl md:text-8xl font-black font-headline uppercase tracking-tighter leading-none text-on-surface">
-                        Daily <span class="text-primary">Feed</span>
+                        The <span class="text-primary">Feed</span>
 </h1>
 <p class="text-on-surface-variant text-xl max-w-xl font-body">The heartbeat of the island, delivered fresh every hour.</p>
 </div>
@@ -250,7 +250,7 @@
 <div class="space-y-6">
 <div class="flex justify-between items-end">
 <h2 class="text-3xl font-black font-headline uppercase tracking-tighter">Fresh <span class="text-primary">Pressings</span></h2>
-<a class="text-on-surface-variant text-sm font-bold border-b border-on-surface-variant/20 hover:text-primary hover:border-primary transition-all" href="#">View All Drops</a>
+<a class="text-on-surface-variant text-sm font-bold border-b border-on-surface-variant/20 hover:text-primary hover:border-primary transition-all" href="/official_merch/">View All Drops</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="bg-surface-container rounded-xl overflow-hidden group border border-outline-variant/10">
