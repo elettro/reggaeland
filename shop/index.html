@@ -83,7 +83,12 @@
     .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     .glass-panel { background: rgba(53, 53, 52, 0.6); backdrop-filter: blur(20px); }
     .cta-gradient { background: linear-gradient(135deg, #6add84 0%, #2da553 100%); }
-  </style>
+
+    .shopify-collection-shell iframe,
+    .shopify-collection-shell [class*="shopify-buy__"] {
+      max-width: 100% !important;
+    }
+    </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
   <header class="fixed top-0 w-full z-50 bg-[#353534]/60 backdrop-blur-xl shadow-2xl shadow-black/10 flex justify-between items-center px-8 h-20">
@@ -93,7 +98,7 @@
       <a class="text-[#e5e2e1] hover:text-[#6add84] transition-all duration-300" href="/reggae.land/artist_spotlight/">Artist Spotlight</a>
       <a class="text-[#e5e2e1] hover:text-[#6add84] transition-all duration-300" href="/reggae.land/the_feed/">The Feed</a>
       <a class="text-[#e5e2e1] hover:text-[#6add84] transition-all duration-300" href="/reggae.land/official_merch/">Merch</a>
-      <a class="text-[#6add84] border-b-2 border-[#6add84] pb-1" href="https://elettro.github.io/reggae.land/shop/">Shop</a>
+      <a class="text-[#6add84] border-b-2 border-[#6add84] pb-1" href="/shop/">Shop</a>
     </nav>
     <button class="cta-gradient text-on-primary font-bold px-6 py-2 rounded-lg uppercase tracking-wider text-sm">Subscribe</button>
   </header>
@@ -121,26 +126,150 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-10">
           <h2 class="font-headline font-black text-4xl md:text-5xl uppercase tracking-tighter mb-4">Shop the Collection</h2>
-          <p class="text-on-surface-variant max-w-3xl mx-auto text-lg">Embedded view of the Reggae.Land collection from Stashbox. If the embed doesn’t load on your browser, use the button below to open the full storefront.</p>
+          <p class="text-on-surface-variant max-w-3xl mx-auto text-lg">Browse official Reggae.Land products directly on this page. New drops, staples, and artist-favorite essentials are synced from our Shopify collection.</p>
         </div>
 
-        <div class="glass-panel rounded-2xl p-3 md:p-5 border border-outline-variant/20 shadow-2xl shadow-black/20">
-          <div class="bg-surface-container-lowest rounded-xl overflow-hidden min-h-[70vh]">
-            <iframe
-              title="Reggae.Land Shopify Collection"
-              src="https://stashbox.ai/collections/reggaeland"
-              class="w-full h-[75vh] md:h-[80vh]"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div class="glass-panel rounded-2xl p-4 md:p-8 border border-outline-variant/20 shadow-2xl shadow-black/20">
+          <div class="bg-surface-container-lowest rounded-xl p-4 md:p-6 min-h-[420px] overflow-visible">
+            <div class="max-w-[1400px] mx-auto shopify-collection-shell">
+              <div id='collection-component-1775584584712'></div>
+              <script type="text/javascript">
+                /*<![CDATA[*/
+                (function () {
+                  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                  if (window.ShopifyBuy) {
+                    if (window.ShopifyBuy.UI) {
+                      ShopifyBuyInit();
+                    } else {
+                      loadScript();
+                    }
+                  } else {
+                    loadScript();
+                  }
+                  function loadScript() {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.src = scriptURL;
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                    script.onload = ShopifyBuyInit;
+                  }
+                  function ShopifyBuyInit() {
+                    var client = ShopifyBuy.buildClient({
+                      domain: 'f3ea38-3.myshopify.com',
+                      storefrontAccessToken: '047c22073bcf2010ec26f3907478d557',
+                    });
+                    ShopifyBuy.UI.onReady(client).then(function (ui) {
+                      ui.createComponent('collection', {
+                        id: '450438660391',
+                        node: document.getElementById('collection-component-1775584584712'),
+                        moneyFormat: '%24%7B%7Bamount%7D%7D',
+                        options: {
+                          "product": {
+                            "styles": {
+                              "product": {
+                                "@media (min-width: 601px)": {
+                                  "max-width": "calc(25% - 20px)",
+                                  "margin-left": "20px",
+                                  "margin-bottom": "50px",
+                                  "width": "calc(25% - 20px)"
+                                }
+                              },
+                              "button": {
+                                "font-size": "17px",
+                                "padding-top": "16.5px",
+                                "padding-bottom": "16.5px",
+                                "border-radius": "16px",
+                                "padding-left": "87px",
+                                "padding-right": "87px"
+                              },
+                              "quantityInput": {
+                                "font-size": "17px",
+                                "padding-top": "16.5px",
+                                "padding-bottom": "16.5px"
+                              }
+                            },
+                            "buttonDestination": "modal",
+                            "contents": {
+                              "options": false
+                            },
+                            "width": "580px",
+                            "text": {
+                              "button": "View product"
+                            }
+                          },
+                          "productSet": {
+                            "styles": {
+                              "products": {
+                                "@media (min-width: 601px)": {
+                                  "margin-left": "-20px"
+                                }
+                              }
+                            }
+                          },
+                          "modalProduct": {
+                            "contents": {
+                              "img": false,
+                              "imgWithCarousel": true,
+                              "button": false,
+                              "buttonWithQuantity": true
+                            },
+                            "styles": {
+                              "product": {
+                                "@media (min-width: 601px)": {
+                                  "max-width": "100%",
+                                  "margin-left": "0px",
+                                  "margin-bottom": "0px"
+                                }
+                              },
+                              "button": {
+                                "font-size": "17px",
+                                "padding-top": "16.5px",
+                                "padding-bottom": "16.5px",
+                                "border-radius": "16px",
+                                "padding-left": "87px",
+                                "padding-right": "87px"
+                              },
+                              "quantityInput": {
+                                "font-size": "17px",
+                                "padding-top": "16.5px",
+                                "padding-bottom": "16.5px"
+                              }
+                            },
+                            "text": {
+                              "button": "Add to cart"
+                            }
+                          },
+                          "option": {},
+                          "cart": {
+                            "styles": {
+                              "button": {
+                                "font-size": "17px",
+                                "padding-top": "16.5px",
+                                "padding-bottom": "16.5px",
+                                "border-radius": "16px"
+                              }
+                            },
+                            "text": {
+                              "total": "Subtotal",
+                              "button": "Checkout"
+                            }
+                          },
+                          "toggle": {
+                            "styles": {
+                              "count": {
+                                "font-size": "17px"
+                              }
+                            }
+                          }
+                        },
+                      });
+                    });
+                  }
+                })();
+                /*]]>*/
+              </script>
+            </div>
           </div>
-        </div>
-
-        <div class="text-center mt-10">
-          <a class="inline-flex items-center gap-2 cta-gradient text-on-primary px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:opacity-90 transition" href="https://stashbox.ai/collections/reggaeland" target="_blank" rel="noopener noreferrer">
-            Open Full Collection
-            <span class="material-symbols-outlined">open_in_new</span>
-          </a>
         </div>
       </div>
     </section>
@@ -157,7 +286,7 @@
         <a class="text-on-surface-variant hover:text-primary" href="/reggae.land/artist_spotlight/">Artist Spotlight</a>
         <a class="text-on-surface-variant hover:text-primary" href="/reggae.land/the_feed/">The Feed</a>
         <a class="text-on-surface-variant hover:text-primary" href="/reggae.land/official_merch/">Merch</a>
-        <a class="text-primary" href="https://elettro.github.io/reggae.land/shop/">Shop</a>
+        <a class="text-primary" href="/shop/">Shop</a>
       </nav>
     </div>
   </footer>
