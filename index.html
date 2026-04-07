@@ -110,6 +110,11 @@
         .subscribe-wrapper [data-fs-error="email"] {
             font-size: 0.875rem;
             line-height: 1.25rem;
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -122,7 +127,7 @@
 <a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="/reggae.land/artist_spotlight/">Artist Spotlight</a>
 <a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="/reggae.land/the_feed/">The Feed</a>
 <a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="/reggae.land/official_merch/">Merch</a>
-<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="/shop/">Shop</a>
+<a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="https://elettro.github.io/reggae.land/shop/">Shop</a>
 </div>
 <div class="flex items-center gap-4">
 <div class="subscribe-wrapper max-w-md">
@@ -168,58 +173,35 @@
 <section class="py-24 px-8 max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
 <div>
-<h2 class="font-headline font-black text-4xl uppercase tracking-tight mb-2">Latest Stashbox Release</h2>
-<p class="text-on-surface-variant">Live from the Kingston Studios — 4K Experience</p>
+<h2 class="font-headline font-black text-4xl uppercase tracking-tight mb-2">Featured Stashbox Video</h2>
+<p class="text-on-surface-variant">Randomized from the latest 20 uploads on every page load.</p>
 </div>
-<button class="flex items-center gap-2 bg-[#ff0000] text-white px-6 py-3 rounded-full font-bold uppercase text-sm hover:scale-105 transition-transform">
+<a class="flex items-center gap-2 bg-[#ff0000] text-white px-6 py-3 rounded-full font-bold uppercase text-sm hover:scale-105 transition-transform" href="https://www.youtube.com/@stashboxband" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span> Subscribe on YouTube
-                </button>
+                </a>
 </div>
-<div class="relative aspect-video rounded-3xl overflow-hidden bg-surface-container shadow-2xl mb-12 group cursor-pointer">
-<img class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-700" data-alt="wide shot of a full reggae band performing in a professional recording studio with warm wooden panels and vintage microphones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr0B3V7EjlMx-6wOjoBlWK1OH_JhGoSL6hb5gLQrnWDkW2QVl6LhihmI03-0IyCQqEw0NUPw-13WOj5o7L99opZxidME96odr0L8h3xFzGYZGQdtSYxBzqJl5cxS1wTJZRRsgSL6RB-O2v3XQEW6OAn95E47fyKAKRZZ2ZQFbwzcJYbDsXrTZyXcg82S7AscScVrcRh5OT5M-vTLA6FY6V6_6uZlV4uaDV7Y5hPcpNBlw9MTQl88u4hnSiLpbGp87_GVW3SimtgPEW"/>
+<div class="rounded-3xl overflow-hidden bg-surface-container shadow-2xl border border-outline-variant/20" id="stashbox-featured-video">
+<div class="grid lg:grid-cols-[1.25fr_1fr]">
+<a class="relative aspect-video lg:aspect-auto lg:min-h-full group block" href="https://www.youtube.com/@stashboxband" id="stashbox-featured-thumb-link" rel="noopener noreferrer" target="_blank">
+<img alt="Featured Stashbox YouTube thumbnail" class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-700" id="stashbox-featured-thumb" loading="lazy" src="https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg"/>
 <div class="absolute inset-0 flex items-center justify-center">
-<div class="w-24 h-24 rounded-full bg-primary/90 flex items-center justify-center text-on-primary shadow-2xl scale-90 group-hover:scale-100 transition-transform">
+<div class="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center text-on-primary shadow-2xl scale-95 group-hover:scale-100 transition-transform">
 <span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
 </div>
 </div>
-<div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/80 to-transparent">
-<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded text-xs font-bold uppercase tracking-widest mb-4 inline-block">New Release</span>
-<h3 class="text-3xl font-bold text-white">Classic Roots Revival: Kingston Session #42</h3>
+</a>
+<div class="p-8 lg:p-10 flex flex-col justify-between gap-6">
+<div class="space-y-4">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded text-xs font-bold uppercase tracking-widest inline-block">Stashbox on YouTube</span>
+<h3 class="text-3xl md:text-4xl font-headline font-black text-white leading-tight" id="stashbox-featured-title">Loading featured video…</h3>
+<p class="text-on-surface-variant text-sm" id="stashbox-featured-meta">Preparing the latest upload pool.</p>
+<p class="text-on-surface-variant text-sm line-clamp-3" id="stashbox-featured-description"></p>
+</div>
+<div class="flex flex-wrap gap-3">
+<a class="cta-gradient text-on-primary px-6 py-3 rounded-lg font-bold uppercase tracking-wider text-sm" href="https://www.youtube.com/@stashboxband" id="stashbox-featured-watch" rel="noopener noreferrer" target="_blank">Watch on YouTube</a>
+<a class="glass-panel border border-outline-variant/30 text-on-surface px-6 py-3 rounded-lg font-bold uppercase tracking-wider text-sm" href="https://www.youtube.com/@stashboxband/videos" rel="noopener noreferrer" target="_blank">Browse recent uploads</a>
 </div>
 </div>
-<div class="flex gap-6 overflow-x-auto pb-8 no-scrollbar">
-<!-- Thumbnail Loop -->
-<div class="min-w-[280px] space-y-3">
-<div class="aspect-video rounded-xl overflow-hidden relative">
-<img class="w-full h-full object-cover" data-alt="reggae bassist playing a vintage fender bass in a smoke-filled room with green neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjMW5bE3P1rlPJ_Ep05XXk4rF3UT_Fxw71VIHE_E6pzkU0eXayAufdy68xsgENwl5Z9jXbxAKPedaITfB-ninVKjmrWqQClluZfTjfXtibFWixGZKqzTI_D1VkmaN_ZtEz9v2QNP3sZZzbbmm1ulwBcWFeKiGXjsnmvUavdSMeeKoIEG22H888xY1ge4eW26Hb9s8VrYRaJKOWNO6W3DwEmCbNAh6ExjlpAXFVXWDeEJs1ehe41sjJg5OHOr_Y0UOiOAzZqRJPRxlw"/>
-<div class="absolute bottom-2 right-2 bg-black/80 text-xs px-2 py-1 rounded">12:45</div>
-</div>
-<p class="font-bold text-on-surface">The Bassline Theory</p>
-<p class="text-sm text-on-surface-variant">2.4M Views</p>
-</div>
-<div class="min-w-[280px] space-y-3 opacity-60 hover:opacity-100 transition-opacity">
-<div class="aspect-video rounded-xl overflow-hidden relative">
-<img class="w-full h-full object-cover" data-alt="singer with long dreadlocks performing at an outdoor sunset festival with a golden sky background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlOlzkFt5Y7OWVfuW-gm7yelhhY9WmHHpxc_95PErRwTjrfbvuq1k9baDdyBj3RMuH0_TpKPHLRTN8eVgqAFJdM2jualZZPkbX3i-IgYOX96m0l1OBW_5Q9BFJC0LH8PB8gkfhAHAHJgC_n6Uhk2uaConSV9Dv1aLryc_45ySczQoddgeE9Zp1tb3BpZkWZdXNIi0IQLVMimSuaJT7k4DjvjaTG7C8c2HnQDs1oUoKI1Y00bBvwSXu7F1zi_tZhfyYMoYshrGU7H2j"/>
-<div class="absolute bottom-2 right-2 bg-black/80 text-xs px-2 py-1 rounded">15:10</div>
-</div>
-<p class="font-bold text-on-surface">Festival Nights 2023</p>
-<p class="text-sm text-on-surface-variant">1.1M Views</p>
-</div>
-<div class="min-w-[280px] space-y-3 opacity-60 hover:opacity-100 transition-opacity">
-<div class="aspect-video rounded-xl overflow-hidden relative">
-<img class="w-full h-full object-cover" data-alt="drummer hitting a snare drum with high energy, water droplets bouncing off the drum skin in slow motion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZxkHcRhMrZC6_IX_tR9niruYWcN2aJM9UYHAplCGkiUP0f4mLBe5r3kr25cUa9FpUGYXtcMhI4MwI2KIHRHh7kV_cuKw2XKdADSCgw750AbSflDdWfwFgJcDykzuJTbNSMiNGTwnrks8FvIqkKUv2A90ZgdoB03n53-gUqD_YoHd_lhllMX0mdw3agXXqPJDOE_O9I3SaWAfQBYiyoRr3jA9i1DEl48cpXUuS_jTpdlvpY0Oq4sIybCsLV89CvVFkd62twkg1uKlO"/>
-<div class="absolute bottom-2 right-2 bg-black/80 text-xs px-2 py-1 rounded">08:22</div>
-</div>
-<p class="font-bold text-on-surface">The Riddim Masterclass</p>
-<p class="text-sm text-on-surface-variant">890K Views</p>
-</div>
-<div class="min-w-[280px] space-y-3 opacity-60 hover:opacity-100 transition-opacity">
-<div class="aspect-video rounded-xl overflow-hidden relative">
-<img class="w-full h-full object-cover" data-alt="close-up of brass section with trumpets and saxophones reflecting warm stage lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClW4RBu06p9ByiBujLo7Z2-x6ir_qoJg9SAjR5YUx0_L2QDBXm2w_HpjtYEPD7DjvnWUsee57hOIOoIybCYCnVKbWPQtSJlrU-M0JM50Ox5Ji3kggj92PMwe1epWYWnUW6PyWYKOgrSk4s1LMk3g3SX7jNcVVuPtLvqECWl36gvDPLj04G65cq8iwuSt1Q_wxh5wq-srpG41SBsyFB82qHuc4uI7EgPIZKQkGKuzB_YupO61oxKqCOXc6ctUmUzrxGfasEz7TMD-a7"/>
-<div class="absolute bottom-2 right-2 bg-black/80 text-xs px-2 py-1 rounded">22:05</div>
-</div>
-<p class="font-bold text-on-surface">Horns of Zion Live</p>
-<p class="text-sm text-on-surface-variant">540K Views</p>
 </div>
 </div>
 </section>
@@ -411,3 +393,6 @@
 window.formspree('initForm', { formElement: '#subscribe-form-home-nav', formId: 'xgopdgea' });
 </script>
 </body></html>
+<script src="./js/stashbox-featured-video.js" defer></script>
+
+```</body></html>
