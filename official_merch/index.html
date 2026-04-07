@@ -87,6 +87,29 @@
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
+    
+        .subscribe-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .subscribe-wrapper form {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+        }
+        .subscribe-wrapper input[type="email"] {
+            flex: 1 1 220px;
+            min-width: 180px;
+        }
+        .form-success,
+        .form-error,
+        .subscribe-wrapper [data-fs-error="email"] {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary" data-mode="connect">
@@ -102,7 +125,16 @@
 </div>
 <div class="flex items-center space-x-6">
 <button class="material-symbols-outlined text-[#e5e2e1] hover:text-[#6add84] transition-colors" style="">shopping_bag</button>
-<button class="bg-gradient-to-br from-[#6add84] to-[#2da553] text-on-primary font-bold px-6 py-2 rounded-lg active:scale-95 duration-200 transition-all uppercase tracking-tighter text-sm" style="">Subscribe</button>
+<div class="subscribe-wrapper max-w-md">
+<form id="subscribe-form-merch-nav">
+<input type="email" name="email" placeholder="Enter your email" required data-fs-field class="bg-surface-container-highest/80 border border-outline-variant/40 rounded-lg px-3 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:ring-2 focus:ring-primary"/>
+<button type="submit" data-fs-submit-btn class="bg-gradient-to-br from-[#6add84] to-[#2da553] text-on-primary font-bold px-6 py-2 rounded-lg active:scale-95 duration-200 transition-all uppercase tracking-tighter text-sm" style="">Subscribe</button>
+<input type="hidden" name="source_page" value="merch-nav"/>
+</form>
+<span data-fs-error="email" class="text-[#ffb4ab]"></span>
+<div data-fs-success class="form-success text-[#6add84]">You’re subscribed.</div>
+<div data-fs-error class="form-error text-[#ffb4ab]"></div>
+</div>
 </div>
 </nav>
 <!-- Side Navigation (Desktop Only) -->
@@ -323,9 +355,15 @@
 </div>
 <div>
 <h4 class="text-[#6add84] font-headline uppercase font-bold mb-6" style="">Join the Tribe</h4>
-<div class="flex">
-<input class="bg-surface-container border-none focus:ring-1 focus:ring-primary text-sm px-4 py-2 w-full rounded-l-lg outline-none" placeholder="Email Address" type="email">
-<button class="bg-primary text-on-primary px-4 py-2 rounded-r-lg font-bold text-xs" style="">Join</button>
+<div class="subscribe-wrapper">
+<form id="subscribe-form-merch-footer">
+<input class="bg-surface-container border-none focus:ring-1 focus:ring-primary text-sm px-4 py-2 w-full rounded-l-lg outline-none" placeholder="Email Address" type="email" name="email" required data-fs-field>
+<button type="submit" data-fs-submit-btn class="bg-primary text-on-primary px-4 py-2 rounded-r-lg font-bold text-xs" style="">Join</button>
+<input type="hidden" name="source_page" value="merch-footer"/>
+</form>
+<span data-fs-error="email" class="text-[#ffb4ab]"></span>
+<div data-fs-success class="form-success text-[#6add84]">Thanks for joining.</div>
+<div data-fs-error class="form-error text-[#ffb4ab]"></div>
 </div>
 </div>
 </div>
@@ -350,4 +388,10 @@
 </div>
 </nav>
 
-```</body></html>
+<script>window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script>
+window.formspree('initForm', { formElement: '#subscribe-form-merch-nav', formId: 'xgopdgea' });
+window.formspree('initForm', { formElement: '#subscribe-form-merch-footer', formId: 'xgopdgea' });
+</script>
+</body></html>

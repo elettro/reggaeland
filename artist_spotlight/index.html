@@ -89,6 +89,29 @@
             -webkit-text-stroke: 1px rgba(229, 226, 225, 0.3);
             color: transparent;
         }
+    
+        .subscribe-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        .subscribe-wrapper form {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+        }
+        .subscribe-wrapper input[type="email"] {
+            flex: 1 1 220px;
+            min-width: 180px;
+        }
+        .form-success,
+        .form-error,
+        .subscribe-wrapper [data-fs-error="email"] {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
@@ -103,7 +126,16 @@
 <a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="https://elettro.github.io/reggae.land/shop/">Shop</a>
 </nav>
 <div class="flex items-center gap-6">
-<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-lg hover:opacity-80 transition-all duration-300 active:scale-95 duration-200 uppercase text-sm tracking-widest font-headline">Subscribe</button>
+<div class="subscribe-wrapper max-w-md">
+<form id="subscribe-form-artist-nav">
+<input type="email" name="email" placeholder="Enter your email" required data-fs-field class="bg-surface-container-highest/70 border border-outline-variant/40 rounded-lg px-3 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:ring-2 focus:ring-primary"/>
+<button type="submit" data-fs-submit-btn class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-lg hover:opacity-80 transition-all duration-300 active:scale-95 duration-200 uppercase text-sm tracking-widest font-headline">Subscribe</button>
+<input type="hidden" name="source_page" value="artist-nav"/>
+</form>
+<span data-fs-error="email" class="text-error"></span>
+<div data-fs-success class="form-success text-primary">You’re subscribed.</div>
+<div data-fs-error class="form-error text-error"></div>
+</div>
 <img alt="User Profile" class="w-10 h-10 rounded-full border border-outline-variant/30" data-alt="close-up portrait of a stylish person wearing headphones in a moody studio setting with green lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi-Vyb2lG9rAHkTNGZT_O6qGqh9PU4pYJyp8nY1OnUBDT7DwqZhYsnHn5eoEehtYTACqaL4U3xk3HDHCh0LUwMCWQ4rqnGvqfVIes73oUr_QSOi8RDPZ9PzILe0N5_dnCCob14iUmz2nwzrtD1XVbgUavxu1MV-b_1eEgEXvCR7Kjs9sjua8XWoF4ds2bTJLGtHFR8dAIVvEu-sUw8bYFgnk_LDKd3RODjYZ5Y2oFYaY6BR7efGIgr_YopXQ4adW99Ukcq6466Exvm"/>
 </div>
 </header>
@@ -132,7 +164,16 @@
 <li><a class="flex items-center gap-4 px-2 py-2 text-[#bdcabb] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">settings</span> Settings</a></li>
 <li><a class="flex items-center gap-4 px-2 py-2 text-[#bdcabb] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-lg">help</span> Support</a></li>
 </ul>
-<button class="w-full py-3 bg-surface-container-highest text-primary font-bold rounded-lg border border-primary/20 hover:bg-primary/10 transition-all">Subscribe</button>
+<div class="subscribe-wrapper">
+<form id="subscribe-form-artist-sidebar">
+<input type="email" name="email" placeholder="Enter your email" required data-fs-field class="w-full bg-[#2a2a2a] border border-primary/20 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant"/>
+<button type="submit" data-fs-submit-btn class="w-full py-3 bg-surface-container-highest text-primary font-bold rounded-lg border border-primary/20 hover:bg-primary/10 transition-all">Subscribe</button>
+<input type="hidden" name="source_page" value="artist-sidebar"/>
+</form>
+<span data-fs-error="email" class="text-error"></span>
+<div data-fs-success class="form-success text-primary">Thanks for joining.</div>
+<div data-fs-error class="form-error text-error"></div>
+</div>
 </div>
 </aside>
 <main class="lg:ml-64 pt-20 pb-32">
@@ -260,13 +301,17 @@
 <p class="text-on-surface-variant text-xl leading-relaxed">Get exclusive access to underground interviews, early merch drops, and behind-the-scenes Stashbox content.</p>
 </div>
 <div class="flex-1 w-full">
-<form class="space-y-4">
-<div class="relative">
-<input class="w-full bg-surface-container-highest border-none rounded-xl py-5 px-6 focus:ring-2 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Your email address" type="email"/>
-</div>
-<button class="w-full py-5 bg-primary text-on-primary font-headline font-black uppercase tracking-widest rounded-xl hover:bg-primary/90 transition-all active:scale-95">Subscribe Now</button>
-<p class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest text-center mt-4">By subscribing you agree to our privacy policy.</p>
+<div class="subscribe-wrapper">
+<form id="subscribe-form-artist-culture">
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-5 px-6 focus:ring-2 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Your email address" type="email" name="email" required data-fs-field/>
+<button type="submit" data-fs-submit-btn class="w-full py-5 bg-primary text-on-primary font-headline font-black uppercase tracking-widest rounded-xl hover:bg-primary/90 transition-all active:scale-95">Subscribe Now</button>
+<input type="hidden" name="source_page" value="artist-culture"/>
 </form>
+<span data-fs-error="email" class="text-error"></span>
+<div data-fs-success class="form-success text-primary">You’re on the list.</div>
+<div data-fs-error class="form-error text-error"></div>
+<p class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest text-center mt-4">By subscribing you agree to our privacy policy.</p>
+</div>
 </div>
 </div>
 </section>
@@ -322,4 +367,11 @@
 <p class="text-[#bdcabb] text-xs uppercase tracking-widest opacity-50">© 2024 Reggae.Land. All Rights Reserved.</p>
 </div>
 </footer>
+<script>window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script>
+window.formspree('initForm', { formElement: '#subscribe-form-artist-nav', formId: 'xgopdgea' });
+window.formspree('initForm', { formElement: '#subscribe-form-artist-sidebar', formId: 'xgopdgea' });
+window.formspree('initForm', { formElement: '#subscribe-form-artist-culture', formId: 'xgopdgea' });
+</script>
 </body></html>
