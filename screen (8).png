@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#003915",
+                    "on-secondary-container": "#725f00",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "background": "#131313",
+                    "on-secondary": "#3a3000",
+                    "secondary-fixed": "#ffe16d",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed": "#ffdad5",
+                    "tertiary-fixed-dim": "#ffb4a9",
+                    "on-tertiary": "#690001",
+                    "primary-fixed-dim": "#6add84",
+                    "inverse-primary": "#006e2f",
+                    "surface-container-highest": "#353534",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#bdcabb",
+                    "on-primary-fixed": "#002109",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#889486",
+                    "on-tertiary-fixed": "#410000",
+                    "on-error": "#690005",
+                    "tertiary": "#ffb4a9",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#930003",
+                    "on-primary-fixed-variant": "#005322",
+                    "on-primary-container": "#003111",
+                    "primary": "#6add84",
+                    "secondary-container": "#ffdb3c",
+                    "on-surface": "#e5e2e1",
+                    "surface-bright": "#3a3939",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-container": "#ff5543",
+                    "primary-fixed": "#87fb9d",
+                    "on-tertiary-container": "#5c0001",
+                    "secondary": "#fff9ef",
+                    "on-secondary-fixed-variant": "#544600",
+                    "surface-tint": "#6add84",
+                    "primary-container": "#2da553",
+                    "surface-variant": "#353534",
+                    "surface-dim": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#221b00",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface": "#131313",
+                    "outline-variant": "#3e4a3e",
+                    "surface-container": "#201f1f",
+                    "on-background": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Epilogue', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden pb-24">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#353534]/60 backdrop-blur-xl shadow-2xl shadow-black/10 flex justify-between items-center px-8 h-20 w-full">
+<div class="text-2xl font-black text-[#6add84] tracking-widest uppercase">Reggae.Land</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#6add84] border-b-2 border-[#6add84] pb-1 transition-all duration-300" href="#">Stashbox</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Artist Spotlight</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Daily Feed</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Merch</a>
+<a class="font-['Epilogue'] uppercase tracking-tighter text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-[#2da553] text-[#e5e2e1] px-6 py-2 rounded-lg font-bold hover:opacity-80 active:scale-95 transition-all duration-300">Subscribe</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#6add84]">
+<img alt="User Profile" data-alt="close-up portrait of a man with dreadlocks wearing a colorful knitted cap in a high-contrast music studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFuB2Klo3yQxHpndX2V4RzXzN81uqpvkWLPQNsMjBP6ztzkSAYtTpUwYdRKIxFA9mhVx6FX6_nQwQBEkW5EwdDJNzowVbLOjBw_Ihbv8SQYkUMAHnM1gcf-99dwDwLHI1XbLqHN6W0NJfztCMmocGqpDZK9g44vG954zrxjUgCAKoC4nUsfEjfp7k2EHnwo25kEhINUILKX_vTan34Qa-TtXiTzvozOk3tb09fg6H6lf7u6aYn5UmuDnaOOohyFFaJH11xPqx-dHy_"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col bg-[#131313] h-full w-64 border-r border-[#353534]/20 font-['Epilogue'] font-bold">
+<div class="p-8">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-on-primary">RL</div>
+<div>
+<h2 class="text-[#6add84] font-black uppercase text-sm leading-tight">Reggae.Land</h2>
+<p class="text-[10px] text-on-surface-variant tracking-widest uppercase">The Sonic Canvas</p>
+</div>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-[#2da553] text-[#e5e2e1] rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="library_music">library_music</span>
+<span>Stashbox</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span>Artists</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
+<span>Feed</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span>Merch</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#bdcabb] hover:bg-[#353534]/50 rounded-lg mx-2 hover:pl-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span>Shop</span>
+</a>
+</div>
+</div>
+<div class="mt-auto p-8 border-t border-[#353534]/20">
+<a class="flex items-center gap-3 px-4 py-2 text-[#bdcabb] hover:text-[#6add84] transition-colors mb-2" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-[#bdcabb] hover:text-[#6add84] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+</div>
+</aside>
+<main class="lg:ml-64 pt-24 px-6 md:px-12 max-w-7xl mx-auto space-y-16">
+<!-- Header Section -->
+<header class="relative space-y-4">
+<div class="flex items-center gap-3 text-secondary-fixed-dim uppercase tracking-[0.2em] font-black text-sm">
+<span class="material-symbols-outlined fill text-lg" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span>Live from the studio</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black text-secondary-fixed-dim uppercase leading-[0.85] tracking-tighter">
+                The Stashbox <br/> Experience
+            </h1>
+<p class="text-on-surface-variant max-w-2xl text-lg font-medium leading-relaxed italic">
+                Capturing the raw energy of modern roots and dub productions through a lens of high-fidelity cinematic artistry.
+            </p>
+</header>
+<!-- Main Feed / Featured Video -->
+<section class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary-fixed-dim opacity-20 blur-2xl group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative bg-surface-container rounded-xl overflow-hidden aspect-video shadow-2xl">
+<img alt="Featured Video" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="high-quality cinematic shot of a reggae musician playing a vintage bass guitar in a moody, smoke-filled recording studio with amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnTuAIAdCOlLlE6gkBcSxO0e4wRras_2NVMg6sYQjKdI2UnczJcXNaVtZLdc_QOEahFY-KiIPzrrjXcr_-2hMSrmr9aFjJZaDaqbdksxv3M7hp5DcJwMxcs5efvhGokHLb-TOxMPIGkpUNlnNa_AkP4DFPF_n60Ozzjk71j9jY9wSMaMvUExMfqfJrtsPQt4ETTjA9Uep2Y3z-div60w2W0jKY-p0SpD94NgynTWQ9RQ4iFNQB7fH9DgnYDRhU--ssz241vmSfU7tw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent flex items-center justify-center">
+<button class="w-24 h-24 bg-primary text-on-primary rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 shadow-2xl">
+<span class="material-symbols-outlined text-5xl translate-x-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+<div class="space-y-2">
+<span class="bg-tertiary-container text-on-tertiary-container text-[10px] px-3 py-1 rounded-full font-black uppercase tracking-wider">New Production</span>
+<h3 class="text-3xl font-black uppercase">Morning Dew Roots Session (Official Visuals)</h3>
+<p class="text-on-surface-variant font-medium">Recorded at Blackwood Studios, Kingston</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Playlist Grid Section -->
+<div class="space-y-12">
+<!-- Category: Classic Reggae Covers -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<h2 class="text-3xl font-black uppercase tracking-tight text-[#e5e2e1]">Classic Reggae Covers</h2>
+<a class="text-primary font-bold text-sm hover:underline" href="#">View All Sessions</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Playlist Card 1 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-300 group">
+<div class="aspect-video relative">
+<img alt="Playlist Thumbnail" class="w-full h-full object-cover opacity-80" data-alt="vibrant stage lighting with purple and gold hues illuminating a drum set in a professional reggae live concert setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVdrBoGTou24BzPEYHJaSc6K8viUsU4GpthNe2lW3amOsUk1IfqCdMbyMYoHJyVAQMObHJsN5pjFJ5Iq9DMBrUh3E2XqvzBuTZZzRdblUriR2O1vregqAW7LwG7eWCaClYdmLP-WmTr98kPcpVCwKLitkhBguhkIuUqJKr_yxvjMOFy8CXKMoRWQHQnvuBnOba5_BUhGfYyxOFm-Bscuzww4M6AAbGTKzBJ6OF8grx2rH4kF-tXvegGniq8i2UCG6kcVtSrXGQBh2A"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="p-6 space-y-4">
+<h4 class="text-xl font-bold uppercase tracking-tight">The Bob Marley Tributes</h4>
+<button class="w-full py-3 px-4 bg-surface-container-highest text-on-surface font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+                                Watch on YouTube
+                            </button>
+</div>
+</div>
+<!-- Playlist Card 2 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-300 group">
+<div class="aspect-video relative">
+<img alt="Playlist Thumbnail" class="w-full h-full object-cover opacity-80" data-alt="vintage silver studio microphone on a stand with a warm blurred background of professional audio gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp-y_5OA4Erep_q7SgyyhP9jHbWM5oQKrKZ4fMwHdEyMYzj_P6kKGOUqqlPkd3ajdmzJgBqf12zYFzrojngrYbeWjRdu-nKRuYCGQrAwNF2Sm6KbCOdiFahhf7Y8d8uzfCIMRQg6ippmkDXpQSMvgn33HJ922lmlgUOIY-26SO-Ljn-4vSfc6XIe9EmQeoj-7m9qDZJYf9wndiMRmrREhyynnL3GEkE8Br2U7Z01oOpDXNHUeSO93Ui5zBZE0B51Y4O9wOGyrj9Esa"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="p-6 space-y-4">
+<h4 class="text-xl font-bold uppercase tracking-tight">70s Rocksteady Redux</h4>
+<button class="w-full py-3 px-4 bg-surface-container-highest text-on-surface font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+                                Watch on YouTube
+                            </button>
+</div>
+</div>
+<!-- Playlist Card 3 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container transition-all duration-300 group">
+<div class="aspect-video relative">
+<img alt="Playlist Thumbnail" class="w-full h-full object-cover opacity-80" data-alt="close-up of hands playing an acoustic guitar in low light with dust motes dancing in a single beam of spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHZ5TJGQK1BKBzVgjne3ri8UlXZ048Pz0LYA39r_Ym0fT6KYNM77_UpaOlph00Y6oqWdTNRLMquhpjsYnRM3TV0ll9P2SParDyJrwbF_5stIsB74YL1TDBq21jOh_jloBX_FFb1TMm8vYHo-ItjUnFYrOYMQz-b-QJJmxjnj1m5Dcux0a4KEj0Zs0bABMVPHNNaoEGad__36EX-QSVRB3mGwGn5sYVnbVcInnXyBgbVJegBJ7GefokxiljQo9HaFt5RbAcyUHGbkp0"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors"></div>
+</div>
+<div class="p-6 space-y-4">
+<h4 class="text-xl font-bold uppercase tracking-tight">Gregory Isaacs Sessions</h4>
+<button class="w-full py-3 px-4 bg-surface-container-highest text-on-surface font-bold rounded-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+                                Watch on YouTube
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Original Productions -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<h2 class="text-3xl font-black uppercase tracking-tight text-[#e5e2e1]">Original Productions</h2>
+<a class="text-primary font-bold text-sm hover:underline" href="#">View All Original Works</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Large Original Card 1 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden flex flex-col md:flex-row group h-64">
+<div class="w-full md:w-2/5 relative h-full">
+<img alt="Original Content" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="overhead shot of a professional mixing console with numerous sliders and glowing green and red led indicators in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvHOjpzfMUlT_RTH5YT9fo56aFUvNY2eDNxVkT-e9cMqgT8ML-1kOycNfK9m6_LmzR58RP0xpEOHc9Vk9UYg83OVYWwMoJX6FHL8QZWVU_NEagzmb3lbF6xSGTHM5S2ET4qVCeIhmWtx9HIQ-Xl0Yms0kiVFPlxUucX1ANtH22Rbyl1LB4Xh4BCY1ElF9UUtp8Xj4N2-GjDn1_90SGJ0k4ebc_djr_aGVtbYEz8cYkP0TanYf48-ojWYxvU9l6MufNvqXx0eN5SDzF"/>
+</div>
+<div class="p-8 flex flex-col justify-center gap-4 w-full md:w-3/5">
+<h4 class="text-2xl font-black uppercase tracking-tighter">Dub Alchemy Series</h4>
+<p class="text-sm text-on-surface-variant">Step-by-step breakdowns of the most complex dub techniques used in the Stashbox Lab.</p>
+<button class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                                PLAY PLAYLIST <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Large Original Card 2 -->
+<div class="bg-surface-container-high rounded-xl overflow-hidden flex flex-col md:flex-row group h-64">
+<div class="w-full md:w-2/5 relative h-full">
+<img alt="Original Content" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="abstract artistic shot of sound waves visualized as glowing golden lines against a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELmfem0msXzfTjV9AwskgojZpZWC5QIrWwBp-OdWXQoPI2Ry_RnAYRYvmw_hIXdjFv8Qmqnn2sdJLE6TFoF9WdJl3hgZt5hGPBf9Do3u4rpshEIHi_12DWzptSF1KurQKatp9fW9mWB7-zaBEWfthSqeuxq65zOPUrNlWIcYHSPcBnmk-et1KZENRwdCTJwm0fuEZTTGuKKMv3uVzHG0B3_7iQRSLclXSvcAa-3_U_NTVWliBQRMglD2hiY4KrLdlFo7seqld9hZ4"/>
+</div>
+<div class="p-8 flex flex-col justify-center gap-4 w-full md:w-3/5">
+<h4 class="text-2xl font-black uppercase tracking-tighter">The Modern Roots LP</h4>
+<p class="text-sm text-on-surface-variant">A collection of full-length original tracks produced exclusively for the Stashbox YouTube audience.</p>
+<button class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                                PLAY PLAYLIST <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Subscribe Banner -->
+<section class="relative rounded-2xl overflow-hidden py-24 px-8 text-center bg-surface-container-highest">
+<div class="absolute inset-0 opacity-20">
+<img alt="Subscribe Background" class="w-full h-full object-cover" data-alt="atmospheric black and white photo of a large cheering crowd at a music festival with dramatic backlighting and silhouettes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjmFlZu2zVPd7yJpB6jzGajFnUhmzXwkyCa2bPdHd6zod7sGQ4p8QBP1uhOh-isww0ujOAyT5KIXkfciyGx9F8KYv_becifnxcX0y1IBFKwQvLfIvH401A5dwiCMyZ0lXaXSFjJQeIWh4i2r229r2Ekg5jk2UVD8Du1x-XxJr90s7EixcwgdURAYv8Jkiqbdy-4t9oLE3Tpiyo_EKmfebJit4g1GBze-z_1U1_kZMKhRlCj-lVL6gliZQ536NTwBGgpWdNRnjPjvrt"/>
+</div>
+<div class="relative z-10 space-y-8 max-w-2xl mx-auto">
+<div class="inline-flex items-center justify-center bg-primary/20 text-primary px-4 py-1 rounded-full text-xs font-black uppercase tracking-[0.2em] mb-4">
+                    Community Power
+                </div>
+<h2 class="text-5xl md:text-6xl font-black uppercase leading-tight tracking-tighter">Join the 100k+ Stashbox Fam</h2>
+<p class="text-lg text-on-surface-variant font-medium">Never miss a beat. Get notified of every new production, interview, and secret studio session before anyone else.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center pt-4">
+<button class="bg-[#2da553] text-[#e5e2e1] px-12 py-5 rounded-lg font-black uppercase tracking-widest text-sm shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
+                        Subscribe Now
+                    </button>
+<button class="border border-outline-variant text-[#e5e2e1] px-12 py-5 rounded-lg font-black uppercase tracking-widest text-sm hover:bg-surface-container-highest transition-all">
+                        Explore Shop
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-16 px-8 border-t border-[#353534]/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-[#e9c400] font-black text-2xl uppercase tracking-widest">Reggae.Land</div>
+<p class="text-[#bdcabb] font-['Inter'] text-sm leading-relaxed">The global hub for premium reggae content, studio sessions, and the definitive sonic history of the Caribbean.</p>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#6add84] font-black uppercase text-xs tracking-[0.2em]">Socials</h5>
+<ul class="space-y-2 font-['Inter'] text-sm text-[#bdcabb]">
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">YouTube</a></li>
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Instagram</a></li>
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Facebook</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#6add84] font-black uppercase text-xs tracking-[0.2em]">Company</h5>
+<ul class="space-y-2 font-['Inter'] text-sm text-[#bdcabb]">
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">About</a></li>
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Merch Store</a></li>
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#6add84] font-black uppercase text-xs tracking-[0.2em]">Legal</h5>
+<ul class="space-y-2 font-['Inter'] text-sm text-[#bdcabb]">
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Privacy</a></li>
+<li><a class="hover:text-[#e9c400] transition-colors duration-200" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-[#353534]/10 text-center text-[#bdcabb] text-xs">
+            © 2024 Reggae.Land. All Rights Reserved.
+        </div>
+</footer>
+<!-- Persistent Player (Sticky Audio Bar) -->
+<div class="fixed bottom-0 w-full h-20 z-50 bg-[#353534]/70 backdrop-blur-md shadow-[0_-10px_40px_rgba(0,0,0,0.4)] flex justify-between items-center px-6 md:px-12 w-full font-['Inter'] font-bold text-[10px] uppercase">
+<!-- Track Info -->
+<div class="flex items-center gap-4 w-1/3">
+<div class="w-12 h-12 rounded overflow-hidden shadow-lg border border-outline-variant/30">
+<img alt="Current Track" data-alt="album cover art showing a stylized vintage wooden speaker with vibrant green and yellow sound vibrations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOL4F2ZKxlNXKprTPkGxUtY2UJZ_jRhK9xaZvEMh9TKQA4wuicxiuSLhENkVvcxCrNedxT63hwMJlWSGqxaxjAKbeqHX8Rf39P0Sg_SUYp1n9vC9JTBl11ubdYh9Qc-bwsWFjs7N6GtSVxLyh-oMYtEiLl9R-1w3Sw8Ovj9XdwdEQP5Z8_Esmy3RXr7Ly3uMo1FDK6We1zUArLuXo3wqNrReVu8a8_AbweekcThHIRU1Li5QPeuP9SWWrDt5eCpfIFpK3u1stCjpK9"/>
+</div>
+<div class="hidden sm:block">
+<div class="text-[#e5e2e1] text-xs">Now Playing</div>
+<div class="text-[#6add84] text-xs truncate">Morning Dew Roots Session</div>
+</div>
+</div>
+<!-- Player Controls -->
+<div class="flex items-center gap-8 text-[#e5e2e1]">
+<button class="hover:scale-110 transition-transform hidden sm:block">
+<span class="material-symbols-outlined">shuffle</span>
+</button>
+<button class="hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">skip_previous</span>
+</button>
+<button class="w-10 h-10 bg-[#e9c400] text-[#000] rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<button class="hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">skip_next</span>
+</button>
+<button class="hover:scale-110 transition-transform hidden sm:block">
+<span class="material-symbols-outlined">repeat</span>
+</button>
+</div>
+<!-- Volume & Queue -->
+<div class="flex items-center justify-end gap-6 w-1/3">
+<div class="hidden md:flex items-center gap-2 group cursor-pointer">
+<span class="material-symbols-outlined text-[#bdcabb] group-hover:text-[#e9c400]">volume_up</span>
+<div class="w-20 h-1 bg-[#353534] rounded-full relative">
+<div class="absolute top-0 left-0 h-full w-2/3 bg-[#e9c400] rounded-full"></div>
+</div>
+</div>
+<button class="hover:scale-110 transition-transform text-[#e5e2e1]">
+<span class="material-symbols-outlined">playlist_play</span>
+</button>
+</div>
+</div>
+</body></html>
