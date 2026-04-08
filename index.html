@@ -99,11 +99,11 @@
             display: flex;
             align-items: center;
             gap: 0.625rem;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         .subscribe-wrapper input[type="email"] {
-            flex: 1 1 220px;
-            min-width: 180px;
+            flex: 1 1 auto;
+            min-width: 220px;
         }
         .form-success,
         .form-error,
@@ -130,10 +130,10 @@
 <a class="text-[#e5e2e1] hover:text-[#6add84] hover:opacity-80 transition-all duration-300 active:scale-95 duration-200" href="https://elettro.github.io/reggae.land/shop/">Shop</a>
 </div>
 <div class="flex items-center gap-4">
-<div class="subscribe-wrapper max-w-md">
+<div class="subscribe-wrapper max-w-md hidden md:flex">
 <form id="subscribe-form-home-nav">
 <input type="email" name="email" placeholder="Enter your email" required data-fs-field class="bg-surface-container-highest/70 border border-outline-variant/40 rounded-lg px-3 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:ring-2 focus:ring-primary"/>
-<button type="submit" data-fs-submit-btn class="cta-gradient text-on-primary px-6 py-2 rounded-lg font-bold uppercase tracking-wider hover:opacity-80 transition-all active:scale-95">Subscribe</button>
+<button type="submit" data-fs-submit-btn class="cta-gradient text-on-primary px-6 py-2 rounded-lg font-bold uppercase tracking-wider hover:opacity-80 transition-all active:scale-95 shrink-0">Subscribe</button>
 <input type="hidden" name="source_page" value="home-nav"/>
 </form>
 <span data-fs-error="email" class="text-error"></span>
